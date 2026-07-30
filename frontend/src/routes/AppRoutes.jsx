@@ -9,7 +9,8 @@ import AuthLayout from "../layouts/AuthLayout";
 import Projects from "../pages/dashboard/Projects";
 import Tasks from "../pages/dashboard/Tasks";
 import Invoices from "../pages/dashboard/Invoices";
-import Payments from "../pages/dashboard/Payments";
+// import Payments from "../pages/dashboard/Payments";
+
 const AppRoutes = () => {
   return (
     <>
@@ -26,7 +27,8 @@ const AppRoutes = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/invoices" element={<Invoices />} />
-            <Route path="/payments" element={<Payments />} />
+            {/* <Route path="/payments" element={<Payments />} /> */}
+            {/* // <Route path="/settings" element={<Settings />} /> */}
           </Route>
         </Routes>
       </div>

@@ -1,0 +1,38 @@
+import mongoose from "mongoose";
+
+const taskSchema=new mongoose.Schema(
+    {
+        taskName:{
+            type:String,
+            required:true,
+            trim:true,
+        },
+        description:{
+             type:String,
+            default:""
+        },
+        status:{
+            type:String,
+            enum:["todo","in-progress","done"],
+            default:"todo"
+        },
+        priority:{
+            type:String,
+            enum:["low","medium","high"],
+            default:"high"
+        },
+        dueDate:{
+            type:Date
+        },
+        project:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"Project",
+            required:true
+        }
+
+    }
+)
+
+const Task= mongoose.model("Task",taskSchema);
+
+export default Task;

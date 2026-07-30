@@ -52,16 +52,13 @@ const Sidebar = () => {
         </p>
         <div className="flex gap-4 flex-col px-4 ">
           {menuItems.map((e, idx) => (
-            <div
-              key={idx}
-              className="flex gap-2  items-center text-[#ffffff8c] px-4  py-2 hover:text-white hover:bg-[#ffffff0f] cursor-pointer transition-all duration-300 rounded "
-            >
+            <div key={idx} className="flex gap-2  items-center  ">
               {/* <FiFileText />
             <LuLayoutDashboard /> */}
 
               <NavLink
                 to={e.link}
-                className="flex items-center gap-2 text-base active:text-yellow-200 "
+                className="px-4  py-2 w-full flex items-center gap-2 text-base focus:bg-[#e84d19] focus:text-white text-[#ffffff8c]  hover:text-white hover:bg-[#ffffff0f] cursor-pointer transition-all duration-300 rounded "
               >
                 {e.icon}
                 {e.title}
@@ -72,9 +69,12 @@ const Sidebar = () => {
 
         <div className="mt-auto  ">
           <div className=" border-t border-[#ffffff0f] py-4 px-6 ">
-            <div className="flex items-center py-2 px-4 gap-2 hover:text-white hover:bg-[#ffffff0f] cursor-pointer transition-all duration-300 rounded text-[#ffffff8c]">
+            <div className="flex items-center py-2 px-4 gap-2 hover:text-white hover:bg-[#ffffff0f] cursor-pointer transition-all duration-300 rounded text-[#ffffff8c] focus:bg-[#e84d19] focus:text-white">
               <GoGear />
-              <h2 className=" ">Settings</h2>
+              {/* <NavLink to="/settings" className="w-full">
+                Settings
+              </NavLink> */}
+              <h3 className="w-full">Settings</h3>
             </div>
           </div>
           <div className="border-t border-[#ffffff0f] py-4 flex gap-1 items-center justify-between px-2 mx-4">
